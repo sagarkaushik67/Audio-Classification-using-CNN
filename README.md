@@ -73,11 +73,12 @@ Feature maps are extracted from each convolutional layer to visualize:
 
 ## Requirements
 
-```bash
 pip install torch torchaudio librosa numpy matplotlib scikit-learn
 
 
-📊 RESULTS
+## 📊 Results
+
+
 
 
 ![Accuracy Curve](accuracy_curve.png)
