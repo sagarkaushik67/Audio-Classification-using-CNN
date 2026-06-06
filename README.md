@@ -75,3 +75,37 @@ Feature maps are extracted from each convolutional layer to visualize:
 
 ```bash
 pip install torch torchaudio librosa numpy matplotlib scikit-learn
+
+
+📊 RESULTS
+
+
+![Accuracy Curve](accuracy_curve.png)
+
+
+
+
+
+![Loss Curves](loss_curves.png)
+
+
+
+## 🎵 Audio Preprocessing
+
+
+
+![Waveform](waveform.png)
+
+
+
+
+
+![Mel Spectrogram](mel_spectrogram.png)
+
+
+
+## 🧠 Feature Maps
+
+
+
+![Feature Maps](feature_maps.png)
