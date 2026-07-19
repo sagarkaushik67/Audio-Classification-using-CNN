@@ -1,112 +1,29 @@
-## 📌 Overview
+# Create T3 App
 
-Environmental Sound Classification (ESC) is a challenging task due to the complex temporal and spectral nature of real-world audio. This project proposes a **Residual CNN-based deep learning framework** that not only achieves high classification accuracy but also provides **interpretability through intermediate feature map visualization**.
+This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
 
+## What's next? How do I make an app with this?
 
-## Key Results
+We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
 
-| Model        | Accuracy |
-|--------------|----------|
-| SVM Baseline | 62.0%    |
-| Proposed CNN | **84.5%**|
+If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
 
----
+- [Next.js](https://nextjs.org)
+- [NextAuth.js](https://next-auth.js.org)
+- [Prisma](https://prisma.io)
+- [Drizzle](https://orm.drizzle.team)
+- [Tailwind CSS](https://tailwindcss.com)
+- [tRPC](https://trpc.io)
 
-## Features
+## Learn More
 
-- Residual CNN architecture with skip connections
-- Mel-spectrogram-based audio preprocessing
-- Advanced training: mixup augmentation, time-frequency masking, label smoothing, OneCycle LR scheduling
-- Intermediate feature map visualization for model interpretability
-- Comparative analysis with SVM baseline
+To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
 
+- [Documentation](https://create.t3.gg/)
+- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
 
+You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
 
-## 🗂️ Dataset
+## How do I deploy this?
 
-**[ESC-50](https://github.com/karolpiczak/ESC-50)** — A benchmark dataset for environmental sound classification.
-
-| Property       | Value          |
-|----------------|----------------|
-| Total Samples  | 2,000          |
-| Classes        | 50             |
-| Samples/Class  | 40             |
-| Clip Duration  | 5 seconds      |
-| CV Folds       | 5              |
-
-> 4 folds used for training, 1 fold held out for testing (standard protocol).
-
----
-
-## ⚙️ Training Configuration
-
-| Hyperparameter       | Value               |
-|----------------------|---------------------|
-| Optimizer            | AdamW               |
-| LR Schedule          | OneCycle            |
-| Max Learning Rate    | 0.002               |
-| Epochs               | 100                 |
-| Batch Size           | 32                  |
-| Label Smoothing      | 0.1                 |
-| Augmentation         | Mixup + SpecAugment |
-
----
-
-## 🔬 Key Techniques
-
-### 🎵 Audio Preprocessing
-- Resampled to **22,050 Hz**, converted to mono
-- **128 Mel filter banks** via STFT
-- Amplitude-to-dB conversion for log-scaled spectrograms
-
-### 📈 Data Augmentation
-- **Time Masking** — randomly zeros out time segments
-- **Frequency Masking** — randomly zeros out frequency bands
-- **Mixup** — linearly blends pairs of samples and labels
-
-### 🧠 Interpretability
-Feature maps are extracted from each convolutional layer to visualize:
-- **Early layers** → basic frequency and edge patterns
-- **Middle layers** → temporal structure and transitions
-- **Deep layers** → abstract, class-discriminative representations
----
-
-## Requirements
-
-pip install torch torchaudio librosa numpy matplotlib scikit-learn
-
-
-## 📊 Results
-
-
-
-
-![Accuracy Curve](accuracy_curve.png)
-
-
-
-
-
-![Loss Curves](loss_curves.png)
-
-
-
-## 🎵 Audio Preprocessing
-
-
-
-![Waveform](waveform.png)
-
-
-
-
-
-![Mel Spectrogram](mel_spectrogram.png)
-
-
-
-## 🧠 Feature Maps
-
-
-
-![Feature Maps](feature_maps.png)
+Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
